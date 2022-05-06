@@ -47,7 +47,7 @@ int main()
 
     // ----------------------------------
     /* TODO: To spoof one end of the handshake, we need to write data to sinbio here */
-    char data[size_1] = {0};
+    uint8_t data[size_1] = {0};
     ssize_t size = read(STDIN_FILENO, data, size_1);
     BIO_write(sinbio, data, size);
     // ----------------------------------
